@@ -58,6 +58,9 @@
 #include <sstream>
 #include <string>
 
+/* MYDRIVER_MEM) */
+#include <mydriver_mem0.h>
+
 using std::cerr;
 using std::endl;
 using std::fstream;
@@ -138,6 +141,7 @@ static void prepare_devices(const fdt &dtb, fstream &os,
   devices.push_back(new fixed_clock(os, dtb));
   devices.push_back(new fixed_factor_clock(os, dtb));
   devices.push_back(new memory(os, dtb));
+  devices.push_back(new mydriver_mem0(os, dtb));
   devices.push_back(new stdout_path(os, dtb));
 
   /* RISC-V Devices */

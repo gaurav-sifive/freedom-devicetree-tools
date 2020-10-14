@@ -83,7 +83,9 @@ freedom_metal_header_generator_SOURCES = \
 	metal_header/template_device.c++ \
 	metal_header/template_device.h \
 	metal_header/ucb_htif0.c++ \
-	metal_header/ucb_htif0.h
+	metal_header/ucb_htif0.h \
+	metal_header/mydriver_mem0.c++ \
+	metal_header/mydriver_mem0.h
 
 freedom_bare_header_generator_CPPFLAGS = -I$(srcdir) -I$(srcdir)/bare_header
 
